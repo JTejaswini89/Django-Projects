@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5e3f7;
+        }
+
+        h1 {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .border {
+            border: 2px double black;
+            padding: 20px;
+            box-shadow: 2px 3px 5px 2px;
+            border-radius: 10px;
+            width: 500px;
+            background-color:lightcyan;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .border:hover {
+            box-shadow: 4px 4px 10px purple;
+            background-color: white;
+        }
+
+        .task-input {
+            padding: 10px;
+            width: 200px;
+            border: 2px solid purple;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(128, 0, 128, 0.3);
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .task-input:focus {
+            box-shadow: 3px 3px 8px rgba(128, 0, 128, 0.6);
+            outline: none;
+        }
+
+        .submit {
+            border: 2px double black;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 100px;
+            display: block;
+            background-color: pink;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .submit:hover {
+            box-shadow: 2px 4px 10px rgba(212, 5, 177, 0.3);
+            background-color: rgb(124, 210, 124);
+        }
+
+        ul {
+            padding-left: 0;
+        }
+
+        ul li {
+            list-style: none;
+            padding: 5px 0;
+            font-weight: bold;
+        }
+
+        .corner {
+            position: absolute;
+            width: 300px;
+            height: auto;
+            z-index: 10;
+        }
+
+        .top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .top-right {
+            top: 10px;
+            right: 10px;
+        }
+
+        .bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+        .images:hover{
+            transition: box-shadow 0.3s ease;
+        }
+    </style>
+</head>
+<body><div class="images">
+    <!-- Corner Decorations -->
+    <img src="https://img.freepik.com/premium-vector/minimalist-hand-draw-aesthetic-flower_890176-636.jpg" class="corner top-left">
+    <img src="https://img.freepik.com/premium-vector/minimalist-hand-draw-aesthetic-flower_890176-636.jpg" class="corner top-right">
+    <img src="https://img.freepik.com/premium-vector/minimalist-hand-draw-aesthetic-flower_890176-636.jpg" class="corner bottom-left">
+    <img src="https://img.freepik.com/premium-vector/minimalist-hand-draw-aesthetic-flower_890176-636.jpg" class="corner bottom-right">
+</div>
+    <!-- To-Do List Box -->
+    <div class="border"><center>
+        <h1>My To-Do List</h1>
+
+        <form method="post" action="{% url 'add_task' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="submit"><b>Add Task</b></button>
+        </form>
+
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    {{ task.title }}
+                    <a href="{% url 'delete_task' task.id %}">❌</a>
+                </li>
+            {% empty %}
+                <p><strong>No tasks added yet.</strong></p>
+            {% endfor %}
+        </ul>
+    </div></center>
+</body>
+</html>
