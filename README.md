@@ -1,4 +1,4 @@
-# Django-Projects
+# Projects Developed using Django
 <i>
 1.To-Do List:<br>
 Django To-Do List<br>
