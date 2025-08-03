@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Temperature Unit Converter</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: medium;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color:lightblue; 
+            font-weight: bold;
+            color: #222;
+        }
+
+        .convert {
+            border: 8px solid steelblue; 
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        .inside {
+            border-radius: 5px;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        .inside:hover {
+            background-color: light; 
+            color: darkblue; 
+        }
+
+        .submit {
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-weight: bold;
+            background-color: #4682B4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+        }
+
+        .submit:hover {
+            background-color: lightblue; 
+            color: lightyellow; 
+        }
+    </style>
+</head>
+<body>
+    <div class="convert">
+        <h1>Temperature Unit Converter</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label>Enter your number:</label>
+            <input type="text" name="value" step="any" required><br><br>
+
+            <label>Unit Conversion</label>
+            <select class="inside" name="conversion" required>
+                <option value="c_to_f">Celsius to Fahrenheit</option>
+                <option value="f_to_c">Fahrenheit to Celsius</option>
+                <option value="c_to_k">Celsius to Kelvin</option>
+                <option value="k_to_c">Kelvin to Celsius</option>
+                <option value="f_to_k">Fahrenheit to Kelvin</option>
+                <option value="k_to_f">Kelvin to Fahrenheit</option>
+            </select><br><br>
+
+            <button class="submit" type="submit">Convert</button>
+        </form>
+
+        {% if result %}
+            <h2>Result: {{ result }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
