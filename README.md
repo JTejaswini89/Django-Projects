@@ -1,6 +1,6 @@
 # Projects Developed using Django
 <i>
-1.To-Do List:<br>
+<b>1.To-Do List:</b><br>
 Django To-Do List<br>
 This is a simple To-Do List web application built using Django. It allows users to add, view, and manage tasks via a clean and responsive interface.<br>
  Features<br>
