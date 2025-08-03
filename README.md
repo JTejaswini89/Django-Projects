@@ -15,7 +15,7 @@ This is a simple and minimal To-Do List web application built using Django. It a
 
  <b>2.Temperature Unit Converter</b>
 <i>
-This is a simple web application built using Django that allows users to convert temperature values between Celsius, Fahrenheit, and Kelvin. The UI includes smooth hover effects, input validation, and a clean design using basic HTML/CSS.
+This is a simple web application built using Django that allows users to convert temperature values between Celsius, Fahrenheit, and Kelvin. The UI includes smooth hover effects, input validation, and a clean design using basic HTML/CSS.<br>
 **Features**
 
 - Convert between:
@@ -25,6 +25,6 @@ This is a simple web application built using Django that allows users to convert
 - Input validation
 - Responsive, styled UI with hover and transition effects
 - Displays the result on the same page
-
+</i>
 
 _____________________________ THANK YOU _____________________________
