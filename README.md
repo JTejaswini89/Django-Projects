@@ -1,14 +1,17 @@
 # Projects Developed using Django
 <i>
-<b>1.To-Do List:</b><br><br>
-Django To-Do List<br>
-This is a simple To-Do List web application built using Django. It allows users to add, view, and manage tasks via a clean and responsive interface.<br>
- Features<br>
-*Add new tasks<br>
-*Delete tasks<br>
-*View the tasks <br>
-*Organized and responsive front-end using Django templates<br>
- =============================================================================
+<b>1.To-Do List</b>
+<i>
+This is a simple and minimal To-Do List web application built using Django. It allows users to add, view, and delete tasks through a clean and responsive interface powered by Django templates and styling.
+
+**Features**
+
+-  Add new tasks  
+-  Delete completed or unwanted tasks  
+-  View all tasks in a simple list  
+-  Organized and responsive front-end using Django Templates & CSS</i>
+<br>
+ =============================================================================<br>
 
  <b>2.Temperature Unit Converter</b>
 <i>
