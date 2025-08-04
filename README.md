@@ -22,19 +22,19 @@ This is a simple web application built using Django that allows users to convert
   - Celsius ↔ Fahrenheit
   - Celsius ↔ Kelvin
   - Fahrenheit ↔ Kelvin
-- Input validation
-- Responsive, styled UI with hover and transition effects
-- Displays the result on the same page<br><br>
+- Input validation.
+- Responsive, styled UI with hover and transition effects.
+- Displays the result on the same page.<br><br>
 </i>
 ==================================================================================<br><br>
 <b>3.Distance Converter</b>
   <i>This is a simple and efficient web application built using Django that allows users to convert distance values between metric and imperial units. The UI is intuitive, responsive, and includes basic styling with hover effects for a clean user experience.<br>
 
 <b>Features</b><br>
--Convert between:
- -Meter ↔ Kilometer
- -Meter ↔ Mile
- -Kilometer ↔ Mile<br>
+-Convert between:<br>
+       -Meter ↔ Kilometer<br>
+       -Meter ↔ Mile<br>
+       -Kilometer ↔ Mile<br>
 -Input validation to ensure only numerical values are processed.<br>
 -Dropdown menu for selecting conversion type.<br>
 -Responsive and styled UI using HTML and CSS.<br>
