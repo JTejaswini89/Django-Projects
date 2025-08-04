@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance Converter</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: medium;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color:lightcyan; 
+            font-weight: bold;
+            color: lightslategray;
+        }
+
+        .converter {
+            border: 5px solid slategray; 
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        .init {
+            border-radius: 5px;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        .init:hover {
+            background-color: light; 
+            color: darkblue; 
+        }
+
+        .submit {
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-weight: bold;
+            background-color: #4682B4;
+            color: white;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .submit:hover {
+            background-color: lightblue; 
+            color:  light goldenrod; 
+        }
+    </style>
+</head>
+<body>
+    <div class="converter">
+        <h1>Distance Converter</h1>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <label>Enter your value:</label><br>
+            <input type="number" name="value" step="any" required><br><br>
+
+            <label>Select Conversion:</label><br>
+            <div class="init">
+                <select name="conversion" required>
+                    <option value="m_to_km">Meter to Kilometer</option>
+                    <option value="km_to_m">Kilometer to Meter</option>
+                    <option value="m_to_mile">Meter to Mile</option>
+                    <option value="mile_to_m">Mile to Meter</option>
+                    <option value="km_to_mile">Kilometer to Mile</option>
+                    <option value="mile_to_km">Mile to Kilometer</option>
+                </select>
+            </div><br>
+
+            <button class="submit" type="submit">Calculate</button>
+        </form>
+
+        {% if result %}
+            <h2>Result: {{ result }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
