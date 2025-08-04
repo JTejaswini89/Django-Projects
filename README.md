@@ -11,7 +11,7 @@ This is a simple and minimal To-Do List web application built using Django. It a
 -  View all tasks in a simple list  
 -  Organized and responsive front-end using Django Templates & CSS</i>
 <br>
- =============================================================================<br>
+ =============================================================================<br><br>
 
  <b>2.Temperature Unit Converter</b>
 <i>
@@ -24,7 +24,20 @@ This is a simple web application built using Django that allows users to convert
   - Fahrenheit ↔ Kelvin
 - Input validation
 - Responsive, styled UI with hover and transition effects
-- Displays the result on the same page
+- Displays the result on the same page<br><br>
 </i>
+==================================================================================<br><br>
+<b>3.Distance Converter</b>
+  <i>This is a simple and efficient web application built using Django that allows users to convert distance values between metric and imperial units. The UI is intuitive, responsive, and includes basic styling with hover effects for a clean user experience.<br>
+
+<b>Features</b><br>
+-Convert between:
+ -Meter ↔ Kilometer
+ -Meter ↔ Mile
+ -Kilometer ↔ Mile<br>
+-Input validation to ensure only numerical values are processed.<br>
+-Dropdown menu for selecting conversion type.<br>
+-Responsive and styled UI using HTML and CSS.<br>
+-Result displayed immediately on the same page.<br>
 
 _____________________________ THANK YOU _____________________________
